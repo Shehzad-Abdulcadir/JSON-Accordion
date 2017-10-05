@@ -1,0 +1,31 @@
+{
+  "name": "accordion",
+  "version": "1.0.0",
+  "description": "JSON Accordion",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shehzad-Abdulcadir/JSON-Accordion.git"
+  },
+  "keywords": [
+    "JSON"
+  ],
+  "author": "Shehzad Abdulcadir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shehzad-Abdulcadir/JSON-Accordion/issues"
+  },
+  "homepage": "https://github.com/Shehzad-Abdulcadir/JSON-Accordion#readme"
+}

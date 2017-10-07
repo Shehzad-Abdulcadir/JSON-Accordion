@@ -1,7 +1,17 @@
-h1 {
-    color: red;
+.accordion {
+    h2 {
 
-    &.default {
-        float:none;
+    }
+
+    p {
+
+    }
+
+    &.active {
+        h2 {
+            &:after {
+                
+            }
+        }
     }
 }

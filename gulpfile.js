@@ -3,11 +3,14 @@ const sass = require('gulp-sass');
 const notify = require('gulp-notify');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+
 const jshint = require('gulp-jshint');
+const concat = require('gulp-concat');
+const jsmin = require('gulp-jsmin');
 
 gulp.task('watch', function() {
     gulp.watch('src/sass/*scss', ['sass']);
-    gulp.watch('src/scripts/*.js', ['jshint']);
+    gulp.watch('src/scripts/*.js', ['jshint', 'compile_js']);
 });
  
 gulp.task('sass', function() {
@@ -29,6 +32,13 @@ gulp.task('jshint', function() {
       .pipe(jshint())
       .pipe(jshint.reporter('jshint-stylish'));
   });
+
+  gulp.task('compile_js', function(){
+   return gulp.src('src/scripts/*.js')
+    .pipe(jsmin())
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('dist/js'));
+});
 
 // new gulp task to compile JS using babel.
 //concatenate

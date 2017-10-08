@@ -9,6 +9,14 @@
         padding: 20px 20px;
         margin: 0;
         border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 900;
+    }
+
+    h2:after {
+        font-family: FontAwesome;
+        content: "\f078";
+        float: right;
     }
 
     p {
@@ -16,16 +24,20 @@
         margin: 0;
         border: 1px solid #eee;
         border-top: 0;
+        font-family: 'Roboto', sans-serif;
+        color: #929292;
     }
 
     & .active {
         h2 {
             background-color: #6844b6;
             color: #fff;
+        }
 
-            &:after {
-
-            }
+        h2:after {
+            font-family: FontAwesome;
+            content: "\f077";
+            float: right;
         }
     }
 }

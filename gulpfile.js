@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const notify = require('gulp-notify');
-const autoprefixer = require('autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('watch', function() {
@@ -12,7 +12,10 @@ gulp.task('sass', function() {
     return gulp.src('src/sass/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compact' }).on('error', sass.logError))
-    //.pipe(autoprefixer())
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     // minify
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'))

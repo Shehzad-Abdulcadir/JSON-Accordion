@@ -10,7 +10,7 @@ const jsmin = require('gulp-jsmin');
 
 gulp.task('watch', function() {
     gulp.watch('src/sass/*scss', ['sass']);
-    gulp.watch('src/scripts/*.js', ['jshint', 'compile_js']);
+    gulp.watch('src/scripts/*.js', ['jshint']);
 });
  
 gulp.task('sass', function() {
@@ -21,7 +21,6 @@ gulp.task('sass', function() {
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    // minify
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'))
     .pipe(notify({ message: 'Sass succesfully compiled' }));
@@ -31,15 +30,11 @@ gulp.task('jshint', function() {
     return gulp.src('src/scripts/*.js')
       .pipe(jshint())
       .pipe(jshint.reporter('jshint-stylish'));
-  });
+});
 
-  gulp.task('compile_js', function(){
+gulp.task('build', function(){
    return gulp.src('src/scripts/*.js')
     .pipe(jsmin())
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('dist/js'));
 });
-
-// new gulp task to compile JS using babel.
-//concatenate
-//minify uglyfy

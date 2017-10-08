@@ -10,7 +10,7 @@ const jsmin = require('gulp-jsmin');
 
 gulp.task('watch', function() {
     gulp.watch('src/sass/*scss', ['sass']);
-    gulp.watch('src/scripts/*.js', ['jshint']);
+    gulp.watch('src/scripts/*.js', ['jshint','compile_js']);
 });
  
 gulp.task('sass', function() {
@@ -32,7 +32,7 @@ gulp.task('jshint', function() {
       .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('build', function(){
+gulp.task('compile_js', function(){
    return gulp.src('src/scripts/*.js')
     .pipe(jsmin())
     .pipe(concat('scripts.js'))

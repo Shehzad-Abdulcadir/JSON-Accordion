@@ -1,16 +1,30 @@
 .accordion {
-    h2 {
+    article {
+        margin: 0 0 5px 0;
+    }
 
+    h2 {
+        background-color: #9e39b0;
+        color: #fff;
+        padding: 20px 20px;
+        margin: 0;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.3);
     }
 
     p {
-
+        padding: 20px;
+        margin: 0;
+        border: 1px solid #eee;
+        border-top: 0;
     }
 
-    &.active {
+    & .active {
         h2 {
+            background-color: #6844b6;
+            color: #fff;
+
             &:after {
-                
+
             }
         }
     }

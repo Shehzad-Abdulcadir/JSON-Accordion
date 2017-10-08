@@ -51,7 +51,7 @@ var accordion = {
             $(this).toggleClass('active');
         });
     },
-}
+};
 //Init Accordion Oject
 accordion.init();
 });

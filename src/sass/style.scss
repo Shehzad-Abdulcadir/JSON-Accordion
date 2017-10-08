@@ -14,10 +14,15 @@
         transition: all 0.3s;
     }
 
+    h2:hover {
+        background-color: #6844b6;
+    }
+
     h2:after {
         font-family: FontAwesome;
         content: "\f078";
         float: right;
+        transition: all 0.3s;
     }
 
     p {
@@ -34,13 +39,10 @@
         h2 {
             background-color: #6844b6;
             color: #fff;
-            transition: all 0.3s;
         }
 
         h2:after {
-            font-family: FontAwesome;
-            content: "\f077";
-            float: right;
+            transform: rotate(-180deg);
         }
     }
 }

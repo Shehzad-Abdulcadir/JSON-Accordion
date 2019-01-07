@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 // Create accordion object
 var accordion = {
     init: function() {
-        this.accordionJson = 'http://design.propcom.co.uk/buildtest/accordion-data.json';
+        this.accordionJson = 'https://design.propcom.co.uk/buildtest/accordion-data.json';
         this.getData();
     },
 
